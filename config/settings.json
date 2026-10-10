@@ -1,0 +1,28 @@
+{
+  "api": {
+    "base_url": "https://api.openweathermap.org/data/2.5/weather",
+    "timeout_seconds": 10,
+    "max_retries": 3,
+    "backoff_seconds": 2
+  },
+  "schedule": {
+    "interval_minutes": 60
+  },
+  "thresholds": {
+    "high_temperature_c": 35,
+    "low_temperature_c": 5,
+    "high_humidity_pct": 85,
+    "high_wind_mps": 15,
+    "alert_cooldown_hours": 6
+  },
+  "valid_ranges": {
+    "temperature_c": [-60, 60],
+    "humidity": [0, 100],
+    "pressure_hpa": [870, 1085],
+    "wind_speed_mps": [0, 75],
+    "rain_1h_mm": [0, 300]
+  },
+  "monitoring": {
+    "stale_after_minutes": 150
+  }
+}

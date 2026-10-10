@@ -1,0 +1,4 @@
+requests>=2.31
+pandas>=2.0
+python-dotenv>=1.0
+# Optional: pytest>=7.0 (tests are plain unittest, so `python -m unittest` also works)

@@ -1,0 +1,20 @@
+2026-10-10 13:02:25,261 | INFO     | src.database | Database ready at /home/claude/weather-data-pipeline/database/weather_data.db
+2026-10-10 13:02:25,264 | INFO     | src.etl_pipeline | Run 4 started for 10 cities
+2026-10-10 13:02:25,268 | INFO     | src.etl_pipeline | Loaded Mumbai: 27.5°C, 55% humidity
+2026-10-10 13:02:25,271 | INFO     | src.etl_pipeline | Loaded Delhi: 23.4°C, 55% humidity
+2026-10-10 13:02:25,273 | INFO     | src.etl_pipeline | Loaded Bangalore: 25.5°C, 61% humidity
+2026-10-10 13:02:25,276 | INFO     | src.etl_pipeline | Loaded Chennai: 31.0°C, 57% humidity
+2026-10-10 13:02:25,278 | INFO     | src.etl_pipeline | Loaded Kolkata: 24.8°C, 65% humidity
+2026-10-10 13:02:25,281 | INFO     | src.etl_pipeline | Loaded Hyderabad: 25.5°C, 59% humidity
+2026-10-10 13:02:25,284 | INFO     | src.etl_pipeline | Loaded Pune: 24.3°C, 67% humidity
+2026-10-10 13:02:25,286 | INFO     | src.etl_pipeline | Loaded Ahmedabad: 27.4°C, 62% humidity
+2026-10-10 13:02:25,289 | INFO     | src.etl_pipeline | Loaded Jaipur: 23.9°C, 62% humidity
+2026-10-10 13:02:25,292 | INFO     | src.etl_pipeline | Loaded Lucknow: 23.7°C, 67% humidity
+2026-10-10 13:02:25,299 | INFO     | src.etl_pipeline | Run 4 finished: SUCCESS (loaded=10, duplicates=0, rejected=0)
+2026-10-10 13:02:26,127 | INFO     | src.database | Database ready at /home/claude/weather-data-pipeline/database/weather_data.db
+2026-10-10 13:02:26,132 | INFO     | src.etl_pipeline | Run 5 started for 1 cities
+2026-10-10 13:02:26,135 | WARNING  | src.api_client | API attempt 1/3 failed for Mumbai,IN: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Mumbai%2CIN&appid=***&units=metric (Caused by NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -2] Name or service not known)"))
+2026-10-10 13:02:28,138 | WARNING  | src.api_client | API attempt 2/3 failed for Mumbai,IN: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Mumbai%2CIN&appid=***&units=metric (Caused by NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -2] Name or service not known)"))
+2026-10-10 13:02:32,141 | WARNING  | src.api_client | API attempt 3/3 failed for Mumbai,IN: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Mumbai%2CIN&appid=***&units=metric (Caused by NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -2] Name or service not known)"))
+2026-10-10 13:02:32,141 | ERROR    | src.etl_pipeline | Failed Mumbai: Failed to fetch Mumbai,IN after 3 attempts: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Mumbai%2CIN&appid=***&units=metric (Caused by NameResolutionError("HTTPSConnection(host='api.openweathermap.org', port=443): Failed to resolve 'api.openweathermap.org' ([Errno -2] Name or service not known)"))
+2026-10-10 13:02:32,144 | INFO     | src.etl_pipeline | Run 5 finished: FAILED (loaded=0, duplicates=0, rejected=1)
